@@ -14,7 +14,7 @@ jobs:
       FILE_NAME: hello-server
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Build for Linux
         run: go build ${{ env.FILE_NAME }}.go
@@ -39,7 +39,7 @@ jobs:
     needs: build-go
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Download Linux Artifact
         uses: actions/download-artifact@v2
@@ -60,7 +60,7 @@ jobs:
     needs: build-go
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Download Windows Artifact
         uses: actions/download-artifact@v2
